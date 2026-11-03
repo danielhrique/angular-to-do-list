@@ -1,59 +1,54 @@
-# ToDoListAngular
+# Minha Lista de Tarefas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.5.
+Aplicação de lista de tarefas desenvolvida com Angular para praticar componentes standalone, formulários reativos e gerenciamento de estado local.
 
-## Development server
+## Funcionalidades
 
-To start a local development server, run:
+- Criar, editar e excluir tarefas com confirmação.
+- Marcar tarefas como concluídas e reabri-las.
+- Filtrar tarefas por todas, pendentes ou concluídas.
+- Acompanhar os totais de tarefas e receber notificações das ações.
+- Manter os dados no `localStorage` do navegador.
+- Usar a interface em telas móveis, tablets e desktops.
 
-```bash
-ng serve
-```
+## Tecnologias
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 22
+- Angular Material
+- TypeScript
+- Reactive Forms e Signals
+- CSS e Sass
 
-## Code scaffolding
+## Requisitos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Node.js e npm instalados.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Instalação
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Uso
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Inicie o servidor de desenvolvimento:
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Abra `http://localhost:4200/` no navegador. As tarefas ficam salvas localmente nesse navegador; limpar os dados do site também remove as tarefas.
 
-For end-to-end (e2e) testing, run:
+## Verificação
+
+Execute os testes:
 
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Gere o build de produção:
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build
+```

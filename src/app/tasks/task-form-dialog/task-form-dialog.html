@@ -1,0 +1,54 @@
+<div class="task-form-modal">
+  <section
+    class="content-form-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="task-form-title"
+  >
+    <header class="task-form-modal__header">
+      <div>
+        <p class="task-form-modal__eyebrow">
+          {{ taskToEdit() ? 'EDITAR TAREFA' : 'NOVA TAREFA' }}
+        </p>
+        <h2 id="task-form-title">
+          {{ taskToEdit() ? 'Edite sua tarefa' : 'Adicione uma tarefa' }}
+        </h2>
+      </div>
+      <button class="task-form-modal__close" type="button" aria-label="Fechar modal" (click)="requestClose()">
+        <mat-icon fontSet="material-symbols-outlined" aria-hidden="true">close</mat-icon>
+      </button>
+    </header>
+
+    <form 
+      class="form-modal"
+      [formGroup]="taskForm"
+      (ngSubmit)="submitTask()"
+    >
+      <label for="task-title">Título*</label>
+      <input id="task-title" name="title" type="text" formControlName="title" placeholder="Ex.: Planejar a semana" />
+
+      <label for="task-description">Descrição*</label>
+      <textarea
+        id="task-description"
+        name="description"
+        rows="4"
+        formControlName="description"
+        placeholder="Adicione alguns detalhes sobre a tarefa"
+      ></textarea>
+
+      <label for="task-priority">Prioridade*</label>
+      <select id="task-priority" name="priority" formControlName="priority">
+        <option value="low">Baixa</option>
+        <option value="medium">Média</option>
+        <option value="high">Alta</option>
+      </select>
+
+      <label for="task-date">Data</label>
+      <input id="task-date" name="date" type="date" formControlName="date" />
+
+      <button class="btn-add-task" type="submit">
+        {{ taskToEdit() ? 'Salvar alterações' : 'Adicionar tarefa' }}
+      </button>
+    </form>
+  </section>
+</div>

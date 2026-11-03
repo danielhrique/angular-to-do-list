@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: dark;
+  --color-background: #111318;
+  --color-surface: #191b22;
+  --color-surface-raised: #242731;
+  --color-border: #373a45;
+  --color-text: #f3f2f7;
+  --color-muted: #a5a6b0;
+  --color-muted-strong: #c8c8d0;
+  --color-accent: #b59af7;
+  --color-accent-hover: #c8b7ff;
+  --color-accent-ink: #211a32;
+  --color-accent-surface: #2a2637;
+  --color-success: #8cd8b0;
+  --color-danger: #ff9a9d;
+  --color-warning: #f1c879;
+  --font-family-base: 'Trebuchet MS', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
